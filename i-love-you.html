@@ -25,8 +25,7 @@
       z-index: -1;
     }
 
-    @keyframes animStar {
-      from {transform: translateY(0px);} to {transform: translateY(-2000px);} }
+    @keyframes animStar { from {transform: translateY(0px);} to {transform: translateY(-2000px);} }
 
     #stars:before {
       content: " ";
@@ -36,7 +35,7 @@
       width: 2px;
       height: 2px;
       background: transparent;
-      box-shadow: 1000px 2000px #fff, 400px 500px #fff, 700px 1500px #fff, 1300px 900px #fff;
+      box-shadow: 1000px 2000px #fff, 400px 500px #fff, 700px 1500px #fff, 1300px 900px #fff, 500px 1300px #fff, 900px 700px #fff, 1100px 400px #fff, 1400px 1600px #fff;
       animation: animStar 50s linear infinite;
     }
 
@@ -48,7 +47,7 @@
       width: 3px;
       height: 3px;
       background: transparent;
-      box-shadow: 600px 1200px #fff, 900px 300px #fff, 1500px 1100px #fff;
+      box-shadow: 600px 1200px #fff, 900px 300px #fff, 1500px 1100px #fff, 800px 1400px #fff, 1300px 500px #fff;
       animation: animStar 100s linear infinite;
     }
 
@@ -60,7 +59,7 @@
       width: 1px;
       height: 1px;
       background: transparent;
-      box-shadow: 200px 1400px #fff, 800px 1600px #fff, 1200px 700px #fff;
+      box-shadow: 200px 1400px #fff, 800px 1600px #fff, 1200px 700px #fff, 400px 1000px #fff, 1000px 300px #fff;
       animation: animStar 150s linear infinite;
     }
 
@@ -70,38 +69,31 @@
       padding: 50px 20px;
     }
 
-    h1, h2, h3 {
-      text-align: center;
-      letter-spacing: 1px;
-    }
+    h1, h2, h3 { text-align: center; letter-spacing: 1px; }
 
-    .header h1 {
-      font-size: 3.4rem;
-      color: #d3c7ff;
-      text-shadow: 0 0 15px #a088ff;
-    }
+    .header h1 { font-size: 3.4rem; color: #d3c7ff; text-shadow: 0 0 15px #a088ff; }
 
     .section {
       background: rgba(255, 255, 255, 0.05);
-      padding: 40px;
-      border-radius: 20px;
+      padding: 50px;
+      border-radius: 25px;
       margin-bottom: 50px;
       backdrop-filter: blur(3px);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-      line-height: 1.8;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      line-height: 2;
     }
 
     .hidden-note {
       margin-top: 20px;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 12px;
       background: rgba(255, 255, 255, 0.07);
       display: none;
     }
 
     .reveal-btn {
-      padding: 10px 15px;
-      border-radius: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
       background: #463b99;
       color: #fff;
       cursor: pointer;
@@ -111,18 +103,21 @@
       transition: 0.3s;
     }
 
-    .reveal-btn:hover {
-      background: #6b5ce0;
-    }
+    .reveal-btn:hover { background: #6b5ce0; }
 
-    .footer {
-      text-align: center;
-      opacity: 0.4;
-      margin-top: 40px;
-    }
+    .footer { text-align: center; opacity: 0.4; margin-top: 40px; }
+
+    .star { cursor: pointer; }
+
+    /* Additional twinkling stars around text */
+    .sparkle { display:inline-block; margin:0 2px; color: #fff; text-shadow: 0 0 8px #fff, 0 0 16px #a088ff; }
   </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
   <div id="stars"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>
@@ -135,11 +130,10 @@
     <!-- Love Letter -->
     <div class="section">
       <h2>My Love Letter to You</h2>
-      <p>My love,</p>
-      <p>I made this starry corner of the universe just for you—a quiet constellation of words, a place where my heart reaches for yours across the distance. Every time you open this page, imagine me looking at the same sky, whispering these thoughts to you.</p>
-      <p>You are my constant star, the one light I never lose sight of. Even when we're separated by miles, your presence hums softly in my chest. I hope this space becomes a soft place for your heart to rest.</p>
-      <p>Whenever the world feels heavy, come back here. I’ll be waiting in the words.</p>
-      <p style="text-align:right; font-style:italic;">Yours, always.</p>
+      <p>My dearest love,</p>
+      <p>Since 24th August, when we first became 'us', every moment has felt like a constellation lighting up my life. I cherish every laugh, every soft word, every tiny star of memory we create together. You are my safe place, my constant light, and even across this distance, my heart reaches yours.</p>
+      <p>This website is a little corner of our universe—a reminder that love stretches farther than any miles and shines brighter than any night sky. I hope you feel me here, beneath every twinkling star, whispering that I love you endlessly.</p>
+      <p style="text-align:right; font-style:italic;">Always yours.</p>
     </div>
 
     <!-- Why I Love You -->
@@ -147,7 +141,7 @@
       <h2>Why I Love You</h2>
       <ul>
         <li>The way you make distance feel smaller than it is.</li>
-        <li>Your laugh, which I swear could light up galaxies.</li>
+        <li>Your laugh, which lights up galaxies.</li>
         <li>How you care—gently, thoughtfully, deeply.</li>
         <li>The comfort in your presence, even through a screen.</li>
         <li>Every small detail of you that feels like a star only I can see.</li>
@@ -157,22 +151,38 @@
     <!-- Timeline -->
     <div class="section">
       <h2>Our Constellation Timeline</h2>
+      <p>✨ 24th August — The day we officially started dating.</p>
       <p>✨ The day we first spoke — a star lit up in my sky.</p>
       <p>✨ Our first joke — the moment I realised we shine the same way.</p>
-      <p>✨ The day we became "us" — a whole constellation clicked together.</p>
+      <p>✨ First call that lasted all night — a meteor shower of laughter.</p>
+      <p>✨ First shared dream — we looked at the stars and imagined forever.</p>
+      <p>✨ First time we sent each other photos — like little sparks connecting our worlds.</p>
+      <p>✨ First time we stayed up late talking about everything and nothing — a sky full of confessions.</p>
     </div>
 
     <!-- Message Capsules -->
     <div class="section">
       <h2>Little Messages for Different Moments</h2>
-      <button class="reveal-btn" onclick="toggleNote('night')">If you're reading this at night...</button>
+      <button class="reveal-btn" onclick="toggleNote('morning')">Morning Message</button>
+      <div id="morning" class="hidden-note">Good morning, my love. Even the sunrise feels incomplete without you.</div>
+
+      <button class="reveal-btn" onclick="toggleNote('afternoon')">Afternoon Message</button>
+      <div id="afternoon" class="hidden-note">Thinking of you in this quiet afternoon, wishing you were near.</div>
+
+      <button class="reveal-btn" onclick="toggleNote('evening')">Evening Message</button>
+      <div id="evening" class="hidden-note">The stars are out; they remind me of you and every sparkle in your eyes.</div>
+
+      <button class="reveal-btn" onclick="toggleNote('night')">Night Message</button>
       <div id="night" class="hidden-note">Close your eyes. Pretend I'm whispering goodnight right beside you.</div>
+    </div>
 
-      <button class="reveal-btn" onclick="toggleNote('sad')">If you're feeling sad...</button>
-      <div id="sad" class="hidden-note">Come here. Stay a moment. Let me hold your heart with mine.</div>
-
-      <button class="reveal-btn" onclick="toggleNote('miss')">If you miss me...</button>
-      <div id="miss" class="hidden-note">Look at the sky. I'm there too. We're not as far apart as it seems.</div>
+    <!-- Quiz -->
+    <div class="section">
+      <h2>Fun Love Quiz</h2>
+      <p>Who said 'I love you' first?</p>
+      <button class="reveal-btn" onclick="alert('You did! But I caught up fast 😉')">Answer</button>
+      <p>What is our favorite constellation?</p>
+      <button class="reveal-btn" onclick="alert('Orion, just like our love shines in the night!')">Answer</button>
     </div>
 
     <!-- Future Dreams -->
@@ -190,6 +200,15 @@
       <p>Distance isn’t a wall.<br>
       It’s the space where my love travels<br>
       to reach you.<br><br>
+      Across the silent nights,<br>
+      Through the glow of a thousand stars,<br>
+      My heart whispers your name<br>
+      In every twinkle, in every shimmer.<br><br>
+      Even the galaxies apart cannot dim<br>
+      The light that binds us across time and space.<br>
+      In the quiet, in the vast dark,<br>
+      My love sails to you endlessly,<br>
+      Unbroken, infinite, eternal.<br><br>
       And it always does.</p>
     </div>
 
@@ -219,12 +238,12 @@
     note.style.display = note.style.display === 'block' ? 'none' : 'block';
   }
 
-  function showHold() {
-    document.getElementById('holdmessage').style.display = 'block';
-  }
-  function hideHold() {
-    document.getElementById('holdmessage').style.display = 'none';
-  }
+  function showHold() { document.getElementById('holdmessage').style.display = 'block'; }
+  function hideHold() { document.getElementById('holdmessage').style.display = 'none'; }
+</script>
+</body>
+</html>
+
 </script>
 </body>
 </html>
