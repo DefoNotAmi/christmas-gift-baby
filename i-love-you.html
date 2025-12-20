@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Under Our Stars</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Georgia", serif;
+      background: radial-gradient(circle at 20% 20%, #0b0f29, #000000 70%);
+      color: #e6e6ff;
+      overflow-x: hidden;
+    }
+
+    /* Starfield */
+    #stars, #stars2, #stars3 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: -1;
+    }
+
+    @keyframes animStar {
+      from {transform: translateY(0px);} to {transform: translateY(-2000px);} }
+
+    #stars:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: 1000px 2000px #fff, 400px 500px #fff, 700px 1500px #fff, 1300px 900px #fff;
+      animation: animStar 50s linear infinite;
+    }
+
+    #stars2:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: 600px 1200px #fff, 900px 300px #fff, 1500px 1100px #fff;
+      animation: animStar 100s linear infinite;
+    }
+
+    #stars3:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: 200px 1400px #fff, 800px 1600px #fff, 1200px 700px #fff;
+      animation: animStar 150s linear infinite;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .header h1 {
+      font-size: 3.4rem;
+      color: #d3c7ff;
+      text-shadow: 0 0 15px #a088ff;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 50px;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      line-height: 1.8;
+    }
+
+    .hidden-note {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      display: none;
+    }
+
+    .reveal-btn {
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: #463b99;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+      border: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .reveal-btn:hover {
+      background: #6b5ce0;
+    }
+
+    .footer {
+      text-align: center;
+      opacity: 0.4;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <div class="container">
+    <div class="header">
+      <h1>For You, Beneath Our Shared Sky</h1>
+    </div>
+
+    <!-- Love Letter -->
+    <div class="section">
+      <h2>My Love Letter to You</h2>
+      <p>My love,</p>
+      <p>I made this starry corner of the universe just for you—a quiet constellation of words, a place where my heart reaches for yours across the distance. Every time you open this page, imagine me looking at the same sky, whispering these thoughts to you.</p>
+      <p>You are my constant star, the one light I never lose sight of. Even when we're separated by miles, your presence hums softly in my chest. I hope this space becomes a soft place for your heart to rest.</p>
+      <p>Whenever the world feels heavy, come back here. I’ll be waiting in the words.</p>
+      <p style="text-align:right; font-style:italic;">Yours, always.</p>
+    </div>
+
+    <!-- Why I Love You -->
+    <div class="section">
+      <h2>Why I Love You</h2>
+      <ul>
+        <li>The way you make distance feel smaller than it is.</li>
+        <li>Your laugh, which I swear could light up galaxies.</li>
+        <li>How you care—gently, thoughtfully, deeply.</li>
+        <li>The comfort in your presence, even through a screen.</li>
+        <li>Every small detail of you that feels like a star only I can see.</li>
+      </ul>
+    </div>
+
+    <!-- Timeline -->
+    <div class="section">
+      <h2>Our Constellation Timeline</h2>
+      <p>✨ The day we first spoke — a star lit up in my sky.</p>
+      <p>✨ Our first joke — the moment I realised we shine the same way.</p>
+      <p>✨ The day we became "us" — a whole constellation clicked together.</p>
+    </div>
+
+    <!-- Message Capsules -->
+    <div class="section">
+      <h2>Little Messages for Different Moments</h2>
+      <button class="reveal-btn" onclick="toggleNote('night')">If you're reading this at night...</button>
+      <div id="night" class="hidden-note">Close your eyes. Pretend I'm whispering goodnight right beside you.</div>
+
+      <button class="reveal-btn" onclick="toggleNote('sad')">If you're feeling sad...</button>
+      <div id="sad" class="hidden-note">Come here. Stay a moment. Let me hold your heart with mine.</div>
+
+      <button class="reveal-btn" onclick="toggleNote('miss')">If you miss me...</button>
+      <div id="miss" class="hidden-note">Look at the sky. I'm there too. We're not as far apart as it seems.</div>
+    </div>
+
+    <!-- Future Dreams -->
+    <div class="section">
+      <h2>Dreams I Want to Share With You</h2>
+      <p>• Watching the stars together without a screen between us.</p>
+      <p>• Traveling somewhere quiet, just you and me.</p>
+      <p>• Building small rituals—movie nights, late calls, love notes.</p>
+      <p>• A future where the distance is only a memory.</p>
+    </div>
+
+    <!-- Poem -->
+    <div class="section">
+      <h2>A Poem for You</h2>
+      <p>Distance isn’t a wall.<br>
+      It’s the space where my love travels<br>
+      to reach you.<br><br>
+      And it always does.</p>
+    </div>
+
+    <!-- Hidden Notes -->
+    <div class="section">
+      <h2>Hidden Star Notes</h2>
+      <p>Hover over these little stars ✦ to reveal small secrets.</p>
+      <p>✦ <span class="star">You are my calm.</span></p>
+      <p>✦ <span class="star">You are my wish come true.</span></p>
+      <p>✦ <span class="star">You are the brightest part of my sky.</span></p>
+    </div>
+
+    <!-- Press and Hold -->
+    <div class="section">
+      <h2>Press and Hold</h2>
+      <button class="reveal-btn" onmousedown="showHold()" onmouseup="hideHold()">Press</button>
+      <div id="holdmessage" class="hidden-note">I love you more than words can shape.</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">Made for you, beneath our stars.</div>
+  </div>
+
+<script>
+  function toggleNote(id) {
+    const note = document.getElementById(id);
+    note.style.display = note.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function showHold() {
+    document.getElementById('holdmessage').style.display = 'block';
+  }
+  function hideHold() {
+    document.getElementById('holdmessage').style.display = 'none';
+  }
+</script>
+</body>
+</html>
