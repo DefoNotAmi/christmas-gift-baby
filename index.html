@@ -62,7 +62,33 @@
       box-shadow: 200px 1400px #fff, 800px 1600px #fff, 1200px 700px #fff, 400px 1000px #fff, 1000px 300px #fff;
       animation: animStar 150s linear infinite;
     }
+    #stars:before,
+#stars2:before,
+#stars3:before {
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+}
 
+#stars:before {
+  box-shadow:
+    50px 100px #fff, 120px 300px #fff, 200px 600px #fff, 350px 900px #fff,
+    500px 200px #fff, 650px 450px #fff, 800px 700px #fff, 950px 1000px #fff,
+    1100px 300px #fff, 1250px 650px #fff, 1400px 900px #fff, 1550px 1200px #fff,
+    1700px 400px #fff, 1850px 800px #fff;
+}
+
+#stars2:before {
+  box-shadow:
+    80px 150px #ddd, 240px 500px #ddd, 420px 850px #ddd,
+    620px 300px #ddd, 780px 650px #ddd, 980px 1100px #ddd,
+    1180px 400px #ddd, 1380px 900px #ddd, 1580px 600px #ddd;
+}
+
+#stars3:before {
+  box-shadow:
+    100px 200px #aaa, 300px 400px #aaa, 500px 600px #aaa,
+    700px 800px #aaa, 900px 1000px #aaa, 1100px 1200px #aaa,
+    1300px 500px #aaa, 1500px 700px #aaa, 1700px 900px #aaa;
+}
     .container {
       max-width: 850px;
       margin: 0 auto;
@@ -134,7 +160,7 @@
       <p>This website is a little corner of our universe, a reminder that love stretches farther than any miles and shines brighter than any night sky. I hope you feel me here, beneath every twinkling star, whispering that I love you endlessly.</p>
       <p>I wanted to make you a gift you could go back to whenever you felt sad or even when you wanted to. So here it is, I struggle to code html but I gladly did for you and it took alot of time. I hope it made you happy.</p>
       <p>I understand that it's hard with your family, but never forget that you aren't and never are alone in this. From the day we met, to my last breath, you'll always have my shoulder to lean onto whenever everything feels too hard and i'm never giving up on you.</p>
-      <p>On the 24th of August 2025, I decided to ask you out, and i've never been so happy to ask someone out. I want you to be my one and only love for the rest of my life (apart from Stella and Liam xoxo).</p>
+      <p>I (pro) decided to ask you out, and i've never been so happy to ask someone out. I want you to be my one and only love for the rest of my life (apart from Stella and Liam xoxo).</p>
       <p>I promise you, that i won't ever leave or replace you (I pinky promise). You're not the problem and none of it is your fault, my angel. I love you til death do us apart, and I'm so proud of you for everything Lucas.</p>
       <p style="text-align:right; font-style:italic;">Always yours.</p>
     </div>
@@ -157,20 +183,24 @@
       <p>✨ 24th August — The day we officially started dating.</p>
       <p>✨ 25th August — First sleep call, listening to your soft breathing. (& discovering you snore)</p>
       <p>✨ 4th September — First snaps, like little sparks connecting our worlds.</p>
-      <p>✨ Holidays of October — first talk, alot of sleep calls.</p>
+      <p>✨ Holidays of October — first talk, alot of sleep calls. And i'd say, the days that really made us become closer.</p>
     </div>
 
     <!-- Message Capsules -->
     <div class="section">
       <h2>Little Messages for Different Moments</h2>
-      <button class="reveal-btn" onclick="toggleNote('morning')">Morning Message</button>
-      <div id="morning" class="hidden-note">Good morning, my pretty boy. I hope you had a great night, and that the stars kept you safe through all your dreams.</div>
+      <button class="reveal-btn" onclick="toggleNote('morning')">Morning text</button>
+      <div id="morning" class="hidden-note">Good morning, my love. I hope as you open your eyes, the first thing you feel is the warmth of my thoughts wrapped around you. Today is another page in the story we are writing together, and I want you to step into it knowing that you are never alone. I hope this morning greets you with quiet peace and little sparks of joy—like sunlight brushing against your skin. Remember, no matter what this day brings, you carry my heart with you. Every challenge you face, every small victory, I’m there, cheering you on, smiling with you, holding your hand in spirit. Take a deep breath, love, and feel the steady rhythm of your heart. That rhythm is ours, in a way mine always beats a little faster when I think of you. Make today yours, step by step, moment by moment. And know that by the time evening comes, I’ll be thinking of you with the same warmth that’s starting your day now.</div>
 
-      <button class="reveal-btn" onclick="toggleNote('afternoon')">Afternoon Message</button>
-      <div id="afternoon" class="hidden-note">Thinking of you in this quiet afternoon, wishing you were near (teleport pls).</div>
+      <button class="reveal-btn" onclick="toggleNote('afternoon')">Afternoon text</button>
+      <div id="afternoon" class="hidden-note">I just wanted to remind you in the middle of this day that I’m thinking of you. I hope your afternoon is gentle and that you find small moments to breathe, laugh, or even just sip something warm while imagining me next to you. I know days can get busy, tiring, or even frustrating. But I want you to carry this truth with you: you are enough, exactly as you are. Every effort you make, every bit of energy you put into your day, it matters. You matter, and you make my world brighter just by being in it. So if you’re tired, take a pause. If you’re smiling, let it linger. And if anything feels heavy, let my love be the weight that steadies you. I’ll be here later, excited to hear about all the small moments that made your afternoon uniquely yours.</div>
 
-      <button class="reveal-btn" onclick="toggleNote('night')">Night Message</button>
-      <div id="night" class="hidden-note">Be a good  boy and close your eyes for me. Pretend I'm whispering goodnight right beside you. Holding you close, keeping you safe.</div>
+      <button class="reveal-btn" onclick="toggleNote('night')">Night text</button>
+      <div id="night" class="hidden-note">As you lay down tonight, I hope you feel the quiet presence of my love beside you. The world may have been loud, tiring, or even a little unfair today, but now it’s time for rest. Let your mind drift and your body soften. Let the stars above remind you that even the dark has beauty, just as our quiet moments together have their own magic. Close your eyes and imagine my arms around you. Let them carry away any worries you couldn’t set down earlier. Sleep is not just an escape; it’s a gentle reset for a heart as hardworking and kind as yours. Remember, no matter what the day brought, you are loved more than words could ever fully capture. Dream of the things that make your heart light and soft. Tomorrow will come, but for now, just be. I’ll be here, thinking of you, wishing you peace, whispering all the little ways you are cherished. Goodnight, my pretty boy. Sleep well.</div>
+    </div>
+
+      <button class="reveal-btn" onclick="toggleNote('night')">Read when you feel down/stressed</button>
+      <div id="night" class="hidden-note">I can feel that things are heavy right now, and I want you to pause for a moment and breathe with me. You don’t have to carry everything perfectly, and you don’t have to face it alone. Let me remind you of what you sometimes forget: you are strong, capable, and loved beyond measure. Stress has a way of making the world feel bigger than it is, but I see you—the real you, the person who laughs too loudly, dreams too deeply, and cares too much. And that person is enough. You don’t need to fix everything, solve every problem, or be perfect. You just need to be you, and that is more than enough for me. If it helps, close your eyes, take a deep breath, and picture me holding your hand. Feel the tension leave your shoulders, even just a little, and know that whatever happens, you are not alone. I am here, loving you quietly but with all my heart, proud of you, and waiting to see you smile again.</div>
     </div>
 
     <!-- Future Dreams -->
@@ -184,6 +214,21 @@
       <p>• Yes, I will let you play hot wheels on me and make you watch my fav movies.</p>
     </div>
 
+    <div class="section">
+      <h2>The Way You Changed My Sky</h2>
+      <p>Before you, my sky was quiet in a way that felt empty.</p>
+      <p>Not dark, not broken, just still. Nights passed without meaning, stars without names, constellations I never bothered to trace. I did not realize something was missing until you arrived so gently that I almost did not notice at first. You did not crash into my world like a storm. You came in softly, like light slowly reaching a place that had been waiting without knowing it.</p>
+      <p>You changed my sky not by being loud, but by staying.</p>
+      <p>By being consistent. By existing in my days in a way that slowly reshaped how I felt about distance, about waiting, about time itself. Suddenly, nights were no longer something to endure. They became moments filled with thoughts of you, moments where the stars felt like quiet witnesses instead of distant decorations. The universe stopped feeling so big and cold. It started feeling shared.</p>
+      <p>You gave meaning to the space between things.</p>
+      <p>To pauses in conversation. To hours apart. To silence that once felt heavy and now feels full. When I look up at the sky, I no longer feel small. I feel connected. Knowing that somewhere under that same sky you exist, breathing and dreaming, is enough to steady me when everything else feels uncertain.</p>
+      <p>You taught my heart a new way to shine.</p>
+      <p>Not burning, not overwhelming, just constant. A soft glow that does not fade with distance. Even on days when I feel tired, unsure, or lost, thinking of you rearranges everything inside me. You do not fix my world or replace it. You simply make it warmer, safer, brighter, the way stars do when you finally learn how to see them.</p>
+      <p>Now, when I imagine the future, I imagine it under a sky that looks different than it used to.</p>
+      <p>One shaped by you. One where love does not rush or disappear, where it does not need to prove itself to exist. A sky where I always know where to look when I need grounding. A sky where, no matter how far apart we are, I always know where my heart belongs.</p>
+      <p style="text-align:right; font-style:italic;">You did not just change my sky. You gave it meaning.</p>
+    </div>
+  
     <!-- Sweet Paragraphs -->
     <div class="section">
       <h2>Sweet Thoughts</h2>
